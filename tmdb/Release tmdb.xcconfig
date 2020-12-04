@@ -1,0 +1,18 @@
+//
+//  Release tmdb.xcconfig
+//  tmdb
+//
+//  Created by M1Dr05 on 2/12/20.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-tmdb/Pods-tmdb.release.xcconfig"
+
+SLASH = /
+
+KEY_TMDB = YOU_KEY_TMDB
+
+BASE_URL = https:$(SLASH)/api.themoviedb.org/3/
+URL_TMDB = https:$(SLASH)/www.themoviedb.org/
