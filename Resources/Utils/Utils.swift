@@ -10,6 +10,11 @@ import UIKit
 
 struct Utils {
     
+    struct URL {
+        static let baseUrl = Bundle.main.infoDictionary!["BASE_URL"] as! String
+        static let urlTmdb = Bundle.main.infoDictionary!["URL_TMDB"] as! String
+    }
+    
     struct COLORS {
         
         static let colorPrimary = UIColor(hex: "#595959")
