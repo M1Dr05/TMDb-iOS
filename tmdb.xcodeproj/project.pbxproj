@@ -18,6 +18,10 @@
 		7E2A8BCE25757FBD001B1FE4 /* tmdbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2A8BCD25757FBD001B1FE4 /* tmdbTests.swift */; };
 		7E2A8BD925757FBD001B1FE4 /* tmdbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2A8BD825757FBD001B1FE4 /* tmdbUITests.swift */; };
 		7E55DE36258420610098DF35 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55DE35258420610098DF35 /* ApiClient.swift */; };
+		7E55DE4A2584295D0098DF35 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55DE492584295D0098DF35 /* Network.swift */; };
+		7E55DE4F2584299A0098DF35 /* RxAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55DE4E2584299A0098DF35 /* RxAlamofire.swift */; };
+		7E55DE612585530E0098DF35 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55DE602585530E0098DF35 /* ResponseError.swift */; };
+		7E55DE6625855A5C0098DF35 /* Genders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55DE6525855A5C0098DF35 /* Genders.swift */; };
 		7ED2ABE2257831C0004CAF23 /* Debug tmdb.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2ABE1257831C0004CAF23 /* Debug tmdb.xcconfig */; };
 		7ED2ABE72578322F004CAF23 /* Release tmdb.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2ABE62578322F004CAF23 /* Release tmdb.xcconfig */; };
 		7ED2ABEF25783644004CAF23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2ABEE25783644004CAF23 /* Assets.xcassets */; };
@@ -59,6 +63,10 @@
 		7E2A8BD825757FBD001B1FE4 /* tmdbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmdbUITests.swift; sourceTree = "<group>"; };
 		7E2A8BDA25757FBD001B1FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E55DE35258420610098DF35 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		7E55DE492584295D0098DF35 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		7E55DE4E2584299A0098DF35 /* RxAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAlamofire.swift; sourceTree = "<group>"; };
+		7E55DE602585530E0098DF35 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
+		7E55DE6525855A5C0098DF35 /* Genders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genders.swift; sourceTree = "<group>"; };
 		7ED2ABE1257831C0004CAF23 /* Debug tmdb.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Debug tmdb.xcconfig"; sourceTree = "<group>"; };
 		7ED2ABE62578322F004CAF23 /* Release tmdb.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release tmdb.xcconfig"; sourceTree = "<group>"; };
 		7ED2ABEE25783644004CAF23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -168,8 +176,19 @@
 			isa = PBXGroup;
 			children = (
 				7E55DE35258420610098DF35 /* ApiClient.swift */,
+				7E55DE492584295D0098DF35 /* Network.swift */,
+				7E55DE4E2584299A0098DF35 /* RxAlamofire.swift */,
 			);
 			path = Api;
+			sourceTree = "<group>";
+		};
+		7E55DE5F258552D20098DF35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E55DE602585530E0098DF35 /* ResponseError.swift */,
+				7E55DE6525855A5C0098DF35 /* Genders.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7ED2ABD125782CDB004CAF23 /* Resources */ = {
@@ -178,6 +197,7 @@
 				7E55DE34258420420098DF35 /* Api */,
 				7ED2ABFC2578388C004CAF23 /* Utils */,
 				7ED2ABD225782D87004CAF23 /* Splash */,
+				7E55DE5F258552D20098DF35 /* Models */,
 				7E2A8BB325757FB7001B1FE4 /* AppDelegate.swift */,
 				7E2A8BB525757FB7001B1FE4 /* SceneDelegate.swift */,
 				7ED2ABEE25783644004CAF23 /* Assets.xcassets */,
@@ -382,8 +402,12 @@
 				7ED2ABFE257838BA004CAF23 /* Utils.swift in Sources */,
 				7E2A8BBE25757FB7001B1FE4 /* tmdb.xcdatamodeld in Sources */,
 				7E2A8BB825757FB7001B1FE4 /* SplashVC.swift in Sources */,
+				7E55DE612585530E0098DF35 /* ResponseError.swift in Sources */,
 				7E2A8BB425757FB7001B1FE4 /* AppDelegate.swift in Sources */,
 				7E2A8BB625757FB7001B1FE4 /* SceneDelegate.swift in Sources */,
+				7E55DE6625855A5C0098DF35 /* Genders.swift in Sources */,
+				7E55DE4A2584295D0098DF35 /* Network.swift in Sources */,
+				7E55DE4F2584299A0098DF35 /* RxAlamofire.swift in Sources */,
 				7E55DE36258420610098DF35 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
