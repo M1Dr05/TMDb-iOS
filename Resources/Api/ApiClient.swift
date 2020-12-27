@@ -26,14 +26,13 @@ class ApiClient {
                 "query":query]
     }
     
-    static func onGetGendersMovies(callback:@escaping(Genders?,String?)->()) -> Void {
+    static func onGetGendersMovies(url:String,callback:@escaping(Genders?,String?)->()) -> Void {
         
         print("-------------------------------")
-        print("*     onGetGendersMovies      *")
+        print("*        onGetGenders         *")
         print("-------------------------------")
         
-        Network.instance.request(Utils.URL.genderMovie,method: .get,parameters: getParams(),encoding: JSONEncoding.default)
-            .validate(contentType: ["application/json"])
+        Network.instance.request(url,method: .get,parameters: getParams(),encoding: JSONEncoding.default)
             .rx.json(t: Genders.self)
             .observeOn(MainScheduler.instance)
             .subscribe(
@@ -42,21 +41,21 @@ class ApiClient {
             ).disposed(by: DisposeBag())
     }
     
-    static func onGetGendersTv(callback:@escaping(Genders?,String?)->()) -> Void {
+
+    static func onGetPersons(page:Int,callback:@escaping(Person?,String?)->()) -> Void {
         
         print("-------------------------------")
-        print("*       onGetGendersTv        *")
+        print("*        onGetPersons         *")
         print("-------------------------------")
         
-        Network.instance.request(Utils.URL.genderTv,method: .get,parameters: getParams(),encoding: JSONEncoding.default)
-            .validate(contentType: ["application/json"])
-            .rx.json(t: Genders.self)
+        Network.instance.request("",method: .get,parameters: getParams(page: page),encoding: JSONEncoding.default)
+            .rx.json(t: Person.self)
             .observeOn(MainScheduler.instance)
             .subscribe(
                 onNext: { callback($0,nil) },
                 onError: { callback(nil,$0.localizedDescription) }
             ).disposed(by: DisposeBag())
-        
     }
+    
     
 }

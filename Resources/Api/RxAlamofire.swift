@@ -16,12 +16,13 @@ extension Reactive where Base: DataRequest {
     func json<T: Decodable>(t: T.Type) -> Observable<T> {
         return Observable.create { observer in
             
-              let request = self.base
-              request.responseJSON { response in
+            let request = self.base
+            request.validate(contentType: ["application/json"])
+            request.responseJSON { response in
                 debugPrint(response)
                 switch response.result {
                 case .success(let data):
-                    
+                
                     do {
                         let json = (data as! String).data(using: .utf8)!
                         let model: T = try JSONDecoder().decode(T.self, from: json)
@@ -29,17 +30,17 @@ extension Reactive where Base: DataRequest {
                     } catch let error {
                         observer.onError(error)
                     }
-                    
+                
                     observer.onCompleted()
-                    
+                
                 case .failure(let error):
                     observer.onError(error)
                 }
-              }
-
-              return Disposables.create {
-                request.cancel()
-              }
             }
+
+            return Disposables.create {
+                request.cancel()
+            }
+        }
     }
 }
