@@ -48,8 +48,23 @@ class ApiClient {
         print("*        onGetPersons         *")
         print("-------------------------------")
         
-        Network.instance.request("",method: .get,parameters: getParams(page: page),encoding: JSONEncoding.default)
+        Network.instance.request(Utils.URL.person,method: .get,parameters: getParams(page: page),encoding: JSONEncoding.default)
             .rx.json(t: Person.self)
+            .observeOn(MainScheduler.instance)
+            .subscribe(
+                onNext: { callback($0,nil) },
+                onError: { callback(nil,$0.localizedDescription) }
+            ).disposed(by: DisposeBag())
+    }
+    
+    static func onGetMovies(url:String,page:Int = 1,callback:@escaping(Movies?,String?)->()) -> Void {
+        
+        print("-------------------------------")
+        print("*        onGetMovies          *")
+        print("-------------------------------")
+        
+        Network.instance.request(url,method: .get,parameters: getParams(page: page),encoding: JSONEncoding.default)
+            .rx.json(t: Movies.self)
             .observeOn(MainScheduler.instance)
             .subscribe(
                 onNext: { callback($0,nil) },

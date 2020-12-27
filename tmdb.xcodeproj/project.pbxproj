@@ -26,6 +26,7 @@
 		7ED2ABEF25783644004CAF23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2ABEE25783644004CAF23 /* Assets.xcassets */; };
 		7ED2ABFE257838BA004CAF23 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2ABFD257838BA004CAF23 /* Utils.swift */; };
 		7EE2966225981A230011B7A4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE2966125981A230011B7A4 /* Person.swift */; };
+		7EE29667259823B40011B7A4 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE29666259823B40011B7A4 /* Movies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		7ED2ABEE25783644004CAF23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ED2ABFD257838BA004CAF23 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		7EE2966125981A230011B7A4 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		7EE29666259823B40011B7A4 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		95CADFE596501F31A74DFF96 /* Pods-tmdb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tmdb.release.xcconfig"; path = "Target Support Files/Pods-tmdb/Pods-tmdb.release.xcconfig"; sourceTree = "<group>"; };
 		D3C88427DFEDE64BC1080BE5 /* Pods_tmdb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tmdb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -187,6 +189,7 @@
 			children = (
 				7E55DE6525855A5C0098DF35 /* Genders.swift */,
 				7EE2966125981A230011B7A4 /* Person.swift */,
+				7EE29666259823B40011B7A4 /* Movies.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EE2966225981A230011B7A4 /* Person.swift in Sources */,
+				7EE29667259823B40011B7A4 /* Movies.swift in Sources */,
 				7ED2ABFE257838BA004CAF23 /* Utils.swift in Sources */,
 				7E2A8BBE25757FB7001B1FE4 /* tmdb.xcdatamodeld in Sources */,
 				7E2A8BB825757FB7001B1FE4 /* SplashVC.swift in Sources */,

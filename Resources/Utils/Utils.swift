@@ -16,6 +16,11 @@ struct Utils {
         
         static let genderMovie = "\(baseUrl)genre/movie/list"
         static let genderTv = "\(baseUrl)genre/tv/list"
+        static let person = "\(baseUrl)person/popular"
+        static let popularMovies = "\(baseUrl)movie/popular"
+        static let topRatedMovies = "\(baseUrl)movie/top_rated"
+        static let upcomingMovies = "\(baseUrl)movie/upcoming"
+        static let nowPlayingMovies = "\(baseUrl)movie/now_playing"
     }
     
     struct GLOBAL {
