@@ -17,10 +17,16 @@
 		7E2A8BC325757FBC001B1FE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E2A8BC125757FBC001B1FE4 /* LaunchScreen.storyboard */; };
 		7E2A8BCE25757FBD001B1FE4 /* tmdbTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2A8BCD25757FBD001B1FE4 /* tmdbTests.swift */; };
 		7E2A8BD925757FBD001B1FE4 /* tmdbUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E2A8BD825757FBD001B1FE4 /* tmdbUITests.swift */; };
+		7E55DE36258420610098DF35 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55DE35258420610098DF35 /* ApiClient.swift */; };
+		7E55DE4A2584295D0098DF35 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55DE492584295D0098DF35 /* Network.swift */; };
+		7E55DE4F2584299A0098DF35 /* RxAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55DE4E2584299A0098DF35 /* RxAlamofire.swift */; };
+		7E55DE6625855A5C0098DF35 /* Genders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E55DE6525855A5C0098DF35 /* Genders.swift */; };
 		7ED2ABE2257831C0004CAF23 /* Debug tmdb.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2ABE1257831C0004CAF23 /* Debug tmdb.xcconfig */; };
 		7ED2ABE72578322F004CAF23 /* Release tmdb.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2ABE62578322F004CAF23 /* Release tmdb.xcconfig */; };
 		7ED2ABEF25783644004CAF23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED2ABEE25783644004CAF23 /* Assets.xcassets */; };
 		7ED2ABFE257838BA004CAF23 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED2ABFD257838BA004CAF23 /* Utils.swift */; };
+		7EE2966225981A230011B7A4 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE2966125981A230011B7A4 /* Person.swift */; };
+		7EE29667259823B40011B7A4 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE29666259823B40011B7A4 /* Movies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,10 +63,16 @@
 		7E2A8BD425757FBD001B1FE4 /* tmdbUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tmdbUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E2A8BD825757FBD001B1FE4 /* tmdbUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tmdbUITests.swift; sourceTree = "<group>"; };
 		7E2A8BDA25757FBD001B1FE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E55DE35258420610098DF35 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		7E55DE492584295D0098DF35 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		7E55DE4E2584299A0098DF35 /* RxAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxAlamofire.swift; sourceTree = "<group>"; };
+		7E55DE6525855A5C0098DF35 /* Genders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genders.swift; sourceTree = "<group>"; };
 		7ED2ABE1257831C0004CAF23 /* Debug tmdb.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Debug tmdb.xcconfig"; sourceTree = "<group>"; };
 		7ED2ABE62578322F004CAF23 /* Release tmdb.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Release tmdb.xcconfig"; sourceTree = "<group>"; };
 		7ED2ABEE25783644004CAF23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ED2ABFD257838BA004CAF23 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		7EE2966125981A230011B7A4 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		7EE29666259823B40011B7A4 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		95CADFE596501F31A74DFF96 /* Pods-tmdb.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tmdb.release.xcconfig"; path = "Target Support Files/Pods-tmdb/Pods-tmdb.release.xcconfig"; sourceTree = "<group>"; };
 		D3C88427DFEDE64BC1080BE5 /* Pods_tmdb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tmdb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -162,11 +174,33 @@
 			path = tmdbUITests;
 			sourceTree = "<group>";
 		};
+		7E55DE34258420420098DF35 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				7E55DE35258420610098DF35 /* ApiClient.swift */,
+				7E55DE492584295D0098DF35 /* Network.swift */,
+				7E55DE4E2584299A0098DF35 /* RxAlamofire.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		7E55DE5F258552D20098DF35 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7E55DE6525855A5C0098DF35 /* Genders.swift */,
+				7EE2966125981A230011B7A4 /* Person.swift */,
+				7EE29666259823B40011B7A4 /* Movies.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		7ED2ABD125782CDB004CAF23 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7E55DE34258420420098DF35 /* Api */,
 				7ED2ABFC2578388C004CAF23 /* Utils */,
 				7ED2ABD225782D87004CAF23 /* Splash */,
+				7E55DE5F258552D20098DF35 /* Models */,
 				7E2A8BB325757FB7001B1FE4 /* AppDelegate.swift */,
 				7E2A8BB525757FB7001B1FE4 /* SceneDelegate.swift */,
 				7ED2ABEE25783644004CAF23 /* Assets.xcassets */,
@@ -368,11 +402,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE2966225981A230011B7A4 /* Person.swift in Sources */,
+				7EE29667259823B40011B7A4 /* Movies.swift in Sources */,
 				7ED2ABFE257838BA004CAF23 /* Utils.swift in Sources */,
 				7E2A8BBE25757FB7001B1FE4 /* tmdb.xcdatamodeld in Sources */,
 				7E2A8BB825757FB7001B1FE4 /* SplashVC.swift in Sources */,
 				7E2A8BB425757FB7001B1FE4 /* AppDelegate.swift in Sources */,
 				7E2A8BB625757FB7001B1FE4 /* SceneDelegate.swift in Sources */,
+				7E55DE6625855A5C0098DF35 /* Genders.swift in Sources */,
+				7E55DE4A2584295D0098DF35 /* Network.swift in Sources */,
+				7E55DE4F2584299A0098DF35 /* RxAlamofire.swift in Sources */,
+				7E55DE36258420610098DF35 /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

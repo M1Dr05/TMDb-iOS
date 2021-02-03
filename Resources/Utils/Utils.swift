@@ -10,6 +10,23 @@ import UIKit
 
 struct Utils {
     
+    struct URL {
+        static let baseUrl = Bundle.main.infoDictionary!["BASE_URL"] as! String
+        static let urlTmdb = Bundle.main.infoDictionary!["URL_TMDB"] as! String
+        
+        static let genderMovie = "\(baseUrl)genre/movie/list"
+        static let genderTv = "\(baseUrl)genre/tv/list"
+        static let person = "\(baseUrl)person/popular"
+        static let popularMovies = "\(baseUrl)movie/popular"
+        static let topRatedMovies = "\(baseUrl)movie/top_rated"
+        static let upcomingMovies = "\(baseUrl)movie/upcoming"
+        static let nowPlayingMovies = "\(baseUrl)movie/now_playing"
+    }
+    
+    struct GLOBAL {
+        static let apiKey = Bundle.main.infoDictionary!["KEY_TMDB"] as! String
+    }
+    
     struct COLORS {
         
         static let colorPrimary = UIColor(hex: "#595959")
